@@ -35,8 +35,8 @@ GOOGLE_SERVICE_ACCOUNT_CREDENTIALS = path_to_your_credentials.json
 ## Installation
 Clone the Repository:
 ```plaintext
-git clone https://github.com/yourusername/your-repo.git
-cd your-repo
+git clone https://github.com/felixorte23/finance_data.git
+cd finance_data
 ```
 
 ### Install Dependencies:
