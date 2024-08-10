@@ -8,55 +8,47 @@ Connect to Google spreadsheet where you add symbol to get data, you can download
 .
 ├── main.py
 ├── finance_data/
-│   ├── module1.py
-│   ├── module2.py
+│   ├── fundalment_data.py
 │   └── ...
 ├── .env
 └── README.md
+```
 
-### Main Directory
+### main.py
 The core functionality of the project, including the main script to run the data retrieval process.
-### Modules (finance_data)
-This directory contains modular scripts and functions used to interact with the Alpha Vantage API, handle data processing, and any other specific tasks related to finance data retrieval.
-#### main.py
 Here it runs the functions to extract and load fundamental to spreedsheet
+### finance_data
+This directory contains modular scripts and functions used to interact with the Alpha Vantage API, handle data processing, and any other specific tasks related to finance data retrieval.
 #### fundamental_data.py
 There are functions to extract fundamental data
 - Balance sheet
 - Income statment
 - Stock daily value
 
+### .env
+Create a .env file in the root directory to add your keys:
+```plaintext
+ALPHAVANTAGE_API_KEY=your_api_key_here
+GOOGLE_SERVICE_ACCOUNT_CREDENTIALS = path_to_your_credentials.json
+```
+
 ## Installation
 Clone the Repository:
-
-bash
-Copy code
+```plaintext
 git clone https://github.com/yourusername/your-repo.git
 cd your-repo
+```
 
-## Install Dependencies:
+### Install Dependencies:
 Make sure you have Python installed. Install the required Python packages:
-
-bash
-Copy code
+```plaintext
 pip install -r requirements.txt
-Set Up Environment Variables:
-Create a .env file in the root directory of the project and add your Alpha Vantage API key:
+```
 
-makefile
-Copy code
-ALPHAVANTAGE_API_KEY=your_api_key_here
-Usage
-To retrieve financial data, run the main script:
+## Usage
 
-bash
-Copy code
-python main.py
-This script will use the modules within the finance_data directory to fetch and process the data.
+Fetch Data: The script will fetch the latest financial data based on the configurations in the finance_data modules.
+Update Google Sheets: The fetched data will be automatically pasted into the specified Google Spreadsheet.
 
-Modules
-finance_data/api_handler.py: Handles the interaction with the Alpha Vantage API.
-finance_data/data_processor.py: Contains functions for processing the retrieved financial data.
-finance_data/utils.py: Utility functions that support data retrieval and processing.
-Contributing
+## Contributing
 If you'd like to contribute to this project, feel free to fork the repository, make changes, and submit a pull request. Please ensure your code adheres to the project's coding standards.
