@@ -1,9 +1,30 @@
 # Finance Data Retrieval Project
 This project is designed to retrieve financial data from the Alpha Vantage API. The project is structured to keep the main functionality separate from modular components for better maintainability and scalability.
+Connect to Google spreadsheet where you add symbol to get data, you can download fundamental data and paste into your file
 
 ## Project Structure
-Main Directory: The core functionality of the project, including the main script to run the data retrieval process.
-Modules (finance_data): This directory contains modular scripts and functions used to interact with the Alpha Vantage API, handle data processing, and any other specific tasks related to finance data retrieval.
+
+```plaintext
+.
+├── main.py
+├── finance_data/
+│   ├── module1.py
+│   ├── module2.py
+│   └── ...
+├── .env
+└── README.md
+
+### Main Directory
+The core functionality of the project, including the main script to run the data retrieval process.
+### Modules (finance_data)
+This directory contains modular scripts and functions used to interact with the Alpha Vantage API, handle data processing, and any other specific tasks related to finance data retrieval.
+#### main.py
+Here it runs the functions to extract and load fundamental to spreedsheet
+#### fundamental_data.py
+There are functions to extract fundamental data
+- Balance sheet
+- Income statment
+- Stock daily value
 
 ## Installation
 Clone the Repository:
@@ -12,7 +33,8 @@ bash
 Copy code
 git clone https://github.com/yourusername/your-repo.git
 cd your-repo
-Install Dependencies:
+
+## Install Dependencies:
 Make sure you have Python installed. Install the required Python packages:
 
 bash
